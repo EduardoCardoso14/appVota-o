@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Otimo from './Otimo';
+import Serio from './Serio';
+import Triste from './Triste';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +20,18 @@ function Navigation() {
           headerStyle: { backgroundColor: 'white' }
         }}  />
         <Stack.Screen name="Otimo" component={Otimo}
+        options={{
+          title: 'Salvar Nota',
+          headerTintColor: 'black',
+          headerStyle: { backgroundColor: 'white' }
+        }}  />
+        <Stack.Screen name="Serio" component={Serio}
+        options={{
+          title: 'Salvar Nota',
+          headerTintColor: 'black',
+          headerStyle: { backgroundColor: 'white' }
+        }}  />
+        <Stack.Screen name="Triste" component={Triste}
         options={{
           title: 'Salvar Nota',
           headerTintColor: 'black',

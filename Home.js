@@ -26,13 +26,13 @@ function Home({ navigation }) {
                             </TouchableOpacity>
                         </View>
                         <View style={estilozin.gridvotacao}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Serio')}>
                                 <Image source={require('./assets/serio.png')} style={estilozin.smileicon}></Image>
                                 <Text style={estilozin.textvotacao}>Médio...</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={estilozin.gridvotacao}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Triste')}>
                                 <Image source={require('./assets/triste.png')} style={estilozin.smileicon}></Image>
                                 <Text style={estilozin.textvotacao}>Ruim!</Text>
                             </TouchableOpacity>
