@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, View, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import estilozin from './style/style.js';
 import Menu from './Menu';
+import DateComponent from './DateComponent.js';
 
 function Home({ navigation }) {
     return (
@@ -13,7 +14,7 @@ function Home({ navigation }) {
                         <Text>Avaliação de Palestras - Rivieverson Coach</Text>
                     </View>
                     <View style={estilozin.viewdate}>
-                        <Text>26/03/2024</Text>
+                        <Text><DateComponent /></Text>
                     </View>
                     <View style={estilozin.viewselecione}>
                         <Text>Relatório de Votos:</Text>
@@ -43,9 +44,9 @@ function Home({ navigation }) {
                     </View>
                     <View style={estilozin.viewobrigado}>
                         <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Home')}>
-                        <View style={estilozin.botaoobg}>
-                            <Text>Votar Novamente</Text>
-                        </View>
+                            <View style={estilozin.botaoobg}>
+                                <Text>Votar Novamente</Text>
+                            </View>
                         </TouchableOpacity>
                     </View>
                 </View>

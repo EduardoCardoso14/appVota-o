@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, View, ImageBackground, TouchableOpacity, Image, TextInput } from 'react-native';
 import estilozin from './style/style.js';
 import Menu from './Menu';
+import DateComponent from './DateComponent.js';
 
 function Serio({ navigation }) {
     return (
@@ -13,7 +14,7 @@ function Serio({ navigation }) {
                         <Text>Avaliação de Palestras - Rivieverson Coach</Text>
                     </View>
                     <View style={estilozin.viewdate}>
-                        <Text>26/03/2024</Text>
+                        <Text><DateComponent /></Text>
                     </View>
                     <View style={estilozin.viewselecione}>
                         <Text>Você selecionou:</Text>
@@ -28,6 +29,8 @@ function Serio({ navigation }) {
                         <TextInput
                             style={estilozin.input}
                             placeholder="Salve uma mensagem aqui..."
+                            multiline={true}
+                            numberOfLines={10}
                         />
                         <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
                         <View style={estilozin.botaoimprov}>
