@@ -29,7 +29,7 @@ function Serio({ navigation }) {
                             style={estilozin.input}
                             placeholder="Salve uma mensagem aqui..."
                         />
-                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Otimo')}>
+                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
                         <View style={estilozin.botaoimprov}>
                                 <Text>Salvar</Text>
                         </View>

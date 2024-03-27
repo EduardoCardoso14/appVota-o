@@ -4,7 +4,7 @@ import { Text, View, ImageBackground, TouchableOpacity, Image, TextInput } from 
 import estilozin from './style/style.js';
 import Menu from './Menu';
 
-function Otimo({ navigation }) {
+function Obrigado({ navigation }) {
     return (
         <View style={estilozin.container}>
             <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
@@ -16,22 +16,18 @@ function Otimo({ navigation }) {
                         <Text>26/03/2024</Text>
                     </View>
                     <View style={estilozin.viewselecione}>
-                        <Text>Você selecionou:</Text>
+                        <Text>Obrigado pelo voto!</Text>
                     </View>
                     <View style={estilozin.votacaoselec}>
                         <View style={estilozin.gridvotacaoselec}>
-                            <Image source={require('./assets/feliz.png')} style={estilozin.smileiconselec}></Image>
-                            <Text style={estilozin.textvotacao}>Ótimo!</Text>
+                            <Image source={require('./assets/joinha.jpg')} style={estilozin.smileiconselec}></Image>
+                            <Text style={estilozin.textvotacao}>Voto registrado!</Text>
                         </View>
                     </View>
-                    <View style={estilozin.viewinput}>
-                        <TextInput
-                            style={estilozin.input}
-                            placeholder="Salve uma mensagem aqui..."
-                        />
-                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
-                        <View style={estilozin.botaoimprov}>
-                                <Text>Salvar</Text>
+                    <View style={estilozin.viewobrigado}>
+                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Home')}>
+                        <View style={estilozin.botaoobg}>
+                            <Text>Nova Avaliação</Text>
                         </View>
                         </TouchableOpacity>
                     </View>
@@ -42,4 +38,4 @@ function Otimo({ navigation }) {
         </View>
     );
 }
-export default Otimo;
+export default Obrigado;

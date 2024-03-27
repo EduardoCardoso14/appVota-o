@@ -16,4 +16,4 @@ function Menu() {
         </View>
     );
 }
-export default Menu;   
+export default Menu;           

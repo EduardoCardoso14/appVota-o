@@ -6,6 +6,8 @@ import Home from './Home';
 import Otimo from './Otimo';
 import Serio from './Serio';
 import Triste from './Triste';
+import Obrigado from './Obrigado';
+import Result from './Result'
 
 const Stack = createStackNavigator();
 
@@ -34,6 +36,18 @@ function Navigation() {
         <Stack.Screen name="Triste" component={Triste}
         options={{
           title: 'Salvar Nota',
+          headerTintColor: 'black',
+          headerStyle: { backgroundColor: 'white' }
+        }}  />
+        <Stack.Screen name="Obrigado" component={Obrigado}
+        options={{
+          title: 'Obrigado pela votação!',
+          headerTintColor: 'black',
+          headerStyle: { backgroundColor: 'white' }
+        }}  />
+        <Stack.Screen name="Result" component={Result}
+        options={{
+          title: 'Resultados',
           headerTintColor: 'black',
           headerStyle: { backgroundColor: 'white' }
         }}  />

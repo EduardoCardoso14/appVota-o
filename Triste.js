@@ -29,7 +29,7 @@ function Triste({ navigation }) {
                             style={estilozin.input}
                             placeholder="Salve uma mensagem aqui..."
                         />
-                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Triste')}>
+                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
                         <View style={estilozin.botaoimprov}>
                                 <Text>Salvar</Text>
                         </View>
