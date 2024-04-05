@@ -6,6 +6,9 @@ import Menu from './Menu';
 import DateComponent from './DateComponent.js';
 
 function Home({ navigation }) {
+    const otimo = 1;
+    const medio = 2;
+    const triste = 3;
     return (
         <View style={estilozin.container}>
             <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
@@ -21,19 +24,19 @@ function Home({ navigation }) {
                     </View>
                     <View style={estilozin.votacao}>
                         <View style={estilozin.gridvotacao}>
-                            <TouchableOpacity onPress={() => navigation.navigate('Otimo')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('TelasVotacao', otimo)}>
                                 <Image source={require('./assets/feliz.png')} style={estilozin.smileicon}></Image>
                                 <Text style={estilozin.textvotacao}>Ótimo!</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={estilozin.gridvotacao}>
-                            <TouchableOpacity onPress={() => navigation.navigate('Serio')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('TelasVotacao', medio)}>
                                 <Image source={require('./assets/serio.png')} style={estilozin.smileicon}></Image>
                                 <Text style={estilozin.textvotacao}>Médio...</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={estilozin.gridvotacao}>
-                            <TouchableOpacity onPress={() => navigation.navigate('Triste')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('TelasVotacao', triste)}>
                                 <Image source={require('./assets/triste.png')} style={estilozin.smileicon}></Image>
                                 <Text style={estilozin.textvotacao}>Ruim!</Text>
                             </TouchableOpacity>
