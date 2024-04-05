@@ -56,6 +56,8 @@ export default StyleSheet.create({
         height: '10%',
         alignItems: 'center',
         justifyContent: 'center',
+        flexDirection: 'row',
+        gap: 20
       },
       votacaoselec:{
           backgroundColor: 'lightgray',
@@ -73,7 +75,7 @@ export default StyleSheet.create({
       },
       votacao:{
           backgroundColor: 'lightgray',
-          top: 20,
+          top: 40,
           width: '95%',
           height: '50%',
           borderRadius: 10,
@@ -187,6 +189,12 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
       },
+      imgskcpo:{
+        width: 60,
+        height: 60,
+        position: 'absolute',
+        left: 120,
+      },
       botaoobg:{
         backgroundColor: 'lightgray',
         borderWidth: 2,
@@ -196,6 +204,13 @@ export default StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+      },
+      inputHome:{
+        borderWidth: 1,
+        height: 35,
+        width: 200,
+        padding: 10,
+        top: 10,
       },
       toucavel:{
         width: '100%',

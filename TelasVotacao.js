@@ -6,124 +6,71 @@ import Menu from './Menu';
 import DateComponent from './DateComponent.js';
 
 function TelasVotacao({ navigation, route }) {
-    const valor = route.params;
-    if (valor == 1){
-        console.log("bom dia")
-        return (
-            <View style={estilozin.container}>
-                <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
-                    <View style={estilozin.main}>
-                        <View style={estilozin.viewtitle}>
-                            <Text>Avaliação de Palestras - Rivieverson Coach</Text>
-                        </View>
-                        <View style={estilozin.viewdate}>
-                            <Text><DateComponent /></Text>
-                        </View>
-                        <View style={estilozin.viewselecione}>
-                            <Text>Você selecionou:</Text>
-                        </View>
-                        <View style={estilozin.votacaoselec}>
-                            <View style={estilozin.gridvotacaoselec}>
-                                <Image source={require('./assets/feliz.png')} style={estilozin.smileiconselec}></Image>
-                                <Text style={estilozin.textvotacao}>Ótimo!</Text>
-                            </View>
-                        </View>
-                        <View style={estilozin.viewinput}>
-                            <TextInput
-                                style={estilozin.input}
-                                placeholder="Salve uma mensagem aqui..."
-                            />
-                            <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
-                            <View style={estilozin.botaoimprov}>
-                                    <Text>Salvar</Text>
-                            </View>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <Menu></Menu>
-                </ImageBackground>
-                <StatusBar style="auto" />
-            </View>
-        );
-    }if (valor == 2){
-        console.log("boa tarde")
-        return (
-            <View style={estilozin.container}>
-                <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
-                    <View style={estilozin.main}>
-                        <View style={estilozin.viewtitle}>
-                            <Text>Avaliação de Palestras - Rivieverson Coach</Text>
-                        </View>
-                        <View style={estilozin.viewdate}>
-                            <Text><DateComponent /></Text>
-                        </View>
-                        <View style={estilozin.viewselecione}>
-                            <Text>Você selecionou:</Text>
-                        </View>
-                        <View style={estilozin.votacaoselec}>
-                            <View style={estilozin.gridvotacaoselec}>
-                                <Image source={require('./assets/serio.png')} style={estilozin.smileiconselec}></Image>
-                                <Text style={estilozin.textvotacao}>Médio...</Text>
-                            </View>
-                        </View>
-                        <View style={estilozin.viewinput}>
-                            <TextInput
-                                style={estilozin.input}
-                                placeholder="Salve uma mensagem aqui..."
-                                multiline={true}
-                                numberOfLines={10}
-                            />
-                            <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
-                            <View style={estilozin.botaoimprov}>
-                                    <Text>Salvar</Text>
-                            </View>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <Menu></Menu>
-                </ImageBackground>
-                <StatusBar style="auto" />
-            </View>
-        );
-    }if (valor == 3){
-        console.log("boa noite")
-        return (
-            <View style={estilozin.container}>
-                <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
-                    <View style={estilozin.main}>
-                        <View style={estilozin.viewtitle}>
-                            <Text>Avaliação de Palestras - Rivieverson Coach</Text>
-                        </View>
-                        <View style={estilozin.viewdate}>
-                            <Text><DateComponent /></Text>
-                        </View>
-                        <View style={estilozin.viewselecione}>
-                            <Text>Você selecionou:</Text>
-                        </View>
-                        <View style={estilozin.votacaoselec}>
-                            <View style={estilozin.gridvotacaoselec}>
-                                <Image source={require('./assets/triste.png')} style={estilozin.smileiconselec}></Image>
-                                <Text style={estilozin.textvotacao}>Ruim!</Text>
-                            </View>
-                        </View>
-                        <View style={estilozin.viewinput}>
-                            <TextInput
-                                style={estilozin.input}
-                                placeholder="Salve uma mensagem aqui..."
-                            />
-                            <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado')}>
-                            <View style={estilozin.botaoimprov}>
-                                    <Text>Salvar</Text>
-                            </View>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <Menu></Menu>
-                </ImageBackground>
-                <StatusBar style="auto" />
-            </View>
-        );
+    const { valor, tit } = route.params;
+    const tipoImagem = (value) => {
+        switch (valor) {
+            case 1:
+                return require('./assets/feliz.png');
+                break;
+            case 2:
+                return require('./assets/serio.png');
+                break;
+            case 3:
+                return require('./assets/triste.png');
+                break;
+        }
     }
-    
+    const imgTitulo = (value) => {
+        switch (valor) {
+            case 1:
+                var description = "Ótimo";
+                return description;
+                break;
+            case 2:
+                var description = "Médio...";
+                return description;
+                break;
+            case 3:
+                var description = "Ruim!";
+                return description;
+                break;
+        }
+    }
+    return (
+        <View style={estilozin.container}>
+            <ImageBackground source={require('./assets/bg.jpg')} resizeMode='cover' style={estilozin.bg}>
+                <View style={estilozin.main}>
+                    <View style={estilozin.viewtitle}>
+                        <Text>{tit}</Text>
+                    </View>
+                    <View style={estilozin.viewdate}>
+                        <Text><DateComponent /></Text>
+                    </View>
+                    <View style={estilozin.viewselecione}>
+                        <Text>Você selecionou:</Text>
+                    </View>
+                    <View style={estilozin.votacaoselec}>
+                        <View style={estilozin.gridvotacaoselec}>
+                            <Image source={tipoImagem()} style={estilozin.smileiconselec}></Image>
+                            <Text style={estilozin.textvotacao}>{imgTitulo()}</Text>
+                        </View>
+                    </View>
+                    <View style={estilozin.viewinput}>
+                        <TextInput
+                            style={estilozin.input}
+                            placeholder="Salve uma mensagem aqui..."
+                        />
+                        <TouchableOpacity style={estilozin.toucavel} onPress={() => navigation.navigate('Obrigado', { valor, tit })}>
+                            <View style={estilozin.botaoimprov}>
+                                <Text>Salvar</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <Menu></Menu>
+            </ImageBackground>
+            <StatusBar style="auto" />
+        </View>
+    );
 }
 export default TelasVotacao;
